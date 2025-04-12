@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete Inspection Notes Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Branch Office Inspection Notes </h1>
+        <form id="inspectionForm">
+
+            <!-- PDF 1 FIELDS -->
+            <section>
+                <h2>Branch Details</h2>
+                <label>Name of Branch Office : * <input type="text" name="branchOffice" required /></label>
+                <label>Name of Sub Office: * <input type="text" name="subOffice" required /></label>
+                <label>Name of HO: <input type="text" name="headOffice" /></label>
+                <label>Facility ID of BO: <input type="text" name="facilityId" /></label>
+                <label>Cost Center of BO: <input type="text" name="costCenter" /></label>
+                <label>Date of Last Inspection: <input type="date" name="lastInspectionDate" /></label>
+                <label>Date of Inspection: <input type="date" name="inspectionDate" /></label>
+            </section>
+
+            <section>
+                <h2>Inspection Visit Info</h2>
+                <label>शाखा टपाल कार्यालयाच्या शेवटच्या तपासणी अधिकार्‍याचा तपशील (
+                    Name of IP/ASP): <input type="text" name="ipName" /></label>
+                <label>Date(s) of MO Visits: <input type="text" name="moVisitDates" /></label>
+                <label>Name of MO: <input type="text" name="moName" /></label>
+                <label>Date of MO Visit Report (if not available): <input type="date" name="moReportDate" /></label>
+            </section>
+
+            <section>
+                <h2>Mail Operations & Cash</h2>
+                <label>Working Hours: <input type="text" name="workingHours" /></label>
+                <label>Mail Receipt Time: <input type="time" name="mailReceiptTime" /></label>
+                <label>Mail Delivery Time: <input type="time" name="mailDeliveryTime" /></label>
+                <label>Letter Box Clearing Time: <input type="time" name="letterBoxClearing" /></label>
+                <label>Mail Despatch Time: <input type="time" name="mailDespatchTime" /></label>
+                <label>Maximum Cash Balance: <input type="number" name="maxCashBalance" /></label>
+                <label>Minimum Cash Balance: <input type="number" name="minCashBalance" /></label>
+            </section>
+
+            <section>
+                <h2>Delivery Information</h2>
+                <label>Attached Villages to BO for Delivery: <textarea name="attachedVillages"
+                        rows="2"></textarea></label>
+                <label>Mail Arrangement: <textarea name="mailArrangement" rows="2"></textarea></label>
+            </section>
+
+            <section>
+                <h2>Branch Staff</h2>
+                <h3>BPM</h3>
+                <label>BPM Employee ID: <input type="text" name="bpmId" /></label>
+                <label>Name of BPM: <input type="text" name="bpmName" /></label>
+                <label>TRCA of BPM: <input type="text" name="bpmTRCA" /></label>
+                <label>DOB of BPM: <input type="date" name="bpmDOB" /></label>
+                <label>Date of Appointment of BPM: <input type="date" name="bpmAppointmentDate" /></label>
+
+                <h3>ABPM-1</h3>
+                <label>ABPM-1 Employee ID: <input type="text" name="abpm1Id" /></label>
+                <label>Name of ABPM-1: <input type="text" name="abpm1Name" /></label>
+                <label>TRCA of ABPM-1: <input type="text" name="abpm1TRCA" /></label>
+                <label>DOB of ABPM-1: <input type="date" name="abpm1DOB" /></label>
+                <label>Date of Appointment of ABPM-1: <input type="date" name="abpm1AppointmentDate" /></label>
+
+                <h3>ABPM-2</h3>
+                <label>ABPM-2 Employee ID: <input type="text" name="abpm2Id" /></label>
+                <label>Name of ABPM-2: <input type="text" name="abpm2Name" /></label>
+                <label>TRCA of ABPM-2: <input type="text" name="abpm2TRCA" /></label>
+                <label>DOB of ABPM-2: <input type="date" name="abpm2DOB" /></label>
+                <label>Date of Appointment of ABPM-2: <input type="date" name="abpm2AppointmentDate" /></label>
+            </section>
+
+            <section>
+                <h2>Mail Records and Devices (PDF 2)</h2>
+                <label>ग्राम छंटाई सूची (Sorting List): <input type="text" name="sortingList" /></label>
+                <label>मार्ग सूची एंव बीट नकाशा (Beat Map): <input type="text" name="beatMap" /></label>
+                <label>डाक मोहर पुस्तक (Mail Stamp Book): <input type="text" name="stampBook" /></label>
+                <label>चुका नोदं पुस्तक (Error Book): <input type="text" name="errorBook" /></label>
+                <label>ऑर्डर बुक (Order Book): <input type="text" name="orderBook" /></label>
+                <label>मागच्या वर्षाचा IR (Last Year IR)*: <input type="text" name="lastYearIR" /></label>
+            </section>
+
+            <section>
+                <h2>Articles Received</h2>
+                <label>Articles Received - Ordinary: <input type="number" name="articlesOrdinary" /></label>
+                <label>Articles Received - Accountable: <input type="number" name="articlesAccountable" /></label>
+            </section>
+
+            <section>
+                <h2>Devices and Connectivity</h2>
+                <label>Number of Letter Boxes Installed: <input type="number" name="letterBoxes" /></label>
+                <label>Mobile Make: <input type="text" name="mobileMake" /></label>
+                <label>IMEI Number: <input type="text" name="imeiNumber" /></label>
+                <label>SIM Number: <input type="text" name="simNumber" /></label>
+                <label>Service Provider SIM: <input type="text" name="simProvider" /></label>
+            </section>
+
+            <section>
+                <h2>Cash and Stamp Balances</h2>
+                <label>BO Wallet Balance on Day of Inspection: <input type="number" name="walletBalanceDay" /></label>
+                <label>BO Stamp Balance on Day of Inspection: <input type="number" name="stampBalance" /></label>
+            </section>
+
+            <section>
+                <h2>BO Cash Balance Verification</h2>
+                <div>
+                    <h3>Entry 1</h3>
+                    <label>Date: <input type="date" name="boCashDate1" /></label>
+                    <label>Balance as per BO Record: <input type="number" name="boCashRecord1" /></label>
+                    <label>Balance Acknowledged by AO: <input type="number" name="boCashAO1" /></label>
+                </div>
+                <div>
+                    <h3>Entry 2</h3>
+                    <label>Date: <input type="date" name="boCashDate2" /></label>
+                    <label>Balance as per BO Record: <input type="number" name="boCashRecord2" /></label>
+                    <label>Balance Acknowledged by AO: <input type="number" name="boCashAO2" /></label>
+                </div>
+                <div>
+                    <h3>Entry 3</h3>
+                    <label>Date: <input type="date" name="boCashDate3" /></label>
+                    <label>Balance as per BO Record: <input type="number" name="boCashRecord3" /></label>
+                    <label>Balance Acknowledged by AO: <input type="number" name="boCashAO3" /></label>
+                </div>
+                <div>
+                    <h3>Entry 4</h3>
+                    <label>Date: <input type="date" name="boCashDate4" /></label>
+                    <label>Balance as per BO Record: <input type="number" name="boCashRecord4" /></label>
+                    <label>Balance Acknowledged by AO: <input type="number" name="boCashAO4" /></label>
+                </div>
+                <div>
+                    <h3>Entry 5</h3>
+                    <label>Date: <input type="date" name="boCashDate5" /></label>
+                    <label>Balance as per BO Record: <input type="number" name="boCashRecord5" /></label>
+                    <label>Balance Acknowledged by AO: <input type="number" name="boCashAO5" /></label>
+                </div>
+            </section>
+
+            <section>
+                <h2>Excess Cash Without Liability</h2>
+                <label>Excess Cash 1 (e.g., Dt.01.01.25 - Rs.25485/-): <input type="text" name="excessCash1" /></label>
+                <label>Excess Cash 2: <input type="text" name="excessCash2" /></label>
+                <label>Excess Cash 3: <input type="text" name="excessCash3" /></label>
+                <label>Excess Cash 4: <input type="text" name="excessCash4" /></label>
+                <label>Excess Cash 5: <input type="text" name="excessCash5" /></label>
+            </section>
+
+            <section>
+                <h2>Specimen Signature Start</h2>
+                <label>Specimen Signature (1) - A/c No: <input type="text" name="specimenAccNo1" /></label>
+                <label>Specimen Signature (1) - Category: <input type="text" name="specimenCategory1" /></label>
+            </section>
+
+            <section>
+                <h2>Specimen Signature Details (PDF 3)</h2>
+                <div>
+                    <h3>Signature 1</h3>
+                    <label>Signature Verified (Yes/No): <input type="text" name="specimenSign1Verified" /></label>
+                    <label>Photo Attached (Yes/No): <input type="text" name="specimenSign1Photo" /></label>
+                </div>
+                <div>
+                    <h3>Signature 2</h3>
+                    <label>Account No: <input type="text" name="specimenAccNo2" /></label>
+                    <label>Category: <input type="text" name="specimenCategory2" /></label>
+                    <label>Signature Verified (Yes/No): <input type="text" name="specimenSign2Verified" /></label>
+                    <label>Photo Attached (Yes/No): <input type="text" name="specimenSign2Photo" /></label>
+                </div>
+                <div>
+                    <h3>Signature 3</h3>
+                    <label>Account No: <input type="text" name="specimenAccNo3" /></label>
+                    <label>Category: <input type="text" name="specimenCategory3" /></label>
+                    <label>Signature Verified (Yes/No): <input type="text" name="specimenSign3Verified" /></label>
+                    <label>Photo Attached (Yes/No): <input type="text" name="specimenSign3Photo" /></label>
+                </div>
+                <div>
+                    <h3>Signature 4</h3>
+                    <label>Account No: <input type="text" name="specimenAccNo4" /></label>
+                    <label>Category: <input type="text" name="specimenCategory4" /></label>
+                    <label>Signature Verified (Yes/No): <input type="text" name="specimenSign4Verified" /></label>
+                    <label>Photo Attached (Yes/No): <input type="text" name="specimenSign4Photo" /></label>
+                </div>
+                <div>
+                    <h3>Signature 5</h3>
+                    <label>Account No: <input type="text" name="specimenAccNo5" /></label>
+                    <label>Category: <input type="text" name="specimenCategory5" /></label>
+                    <label>Signature Verified (Yes/No): <input type="text" name="specimenSign5Verified" /></label>
+                    <label>Photo Attached (Yes/No): <input type="text" name="specimenSign5Photo" /></label>
+                </div>
+            </section>
+
+            <section>
+                <h2>IPPB and Passbook Status</h2>
+                <label>IPPB QR Card Balance: <input type="number" name="ippbQRBalance" /></label>
+                <label>Interest Passbook Sent to AO-SB: <input type="text" name="passbookAOSB" /></label>
+                <label>Interest Passbook Sent to AO-SSA: <input type="text" name="passbookAOSSA" /></label>
+            </section>
+
+            <section>
+                <h2>SB-26 Book Entries</h2>
+                <div>
+                    <h3>Book 1</h3>
+                    <label>Book No: <input type="text" name="sb26BookNo1" /></label>
+                    <label>From Receipt No: <input type="text" name="sb26FromReceiptNo1" /></label>
+                    <label>From Date: <input type="date" name="sb26FromDate1" /></label>
+                    <label>From Amount: <input type="number" name="sb26FromAmount1" /></label>
+                    <label>To Receipt No: <input type="text" name="sb26ToReceiptNo1" /></label>
+                    <label>To Date: <input type="date" name="sb26ToDate1" /></label>
+                    <label>To Amount: <input type="number" name="sb26ToAmount1" /></label>
+                    <label>Balance Receipt: <input type="number" name="sb26Balance1" /></label>
+                </div>
+                <div>
+                    <h3>Book 2</h3>
+                    <label>Book No: <input type="text" name="sb26BookNo2" /></label>
+                    <label>From Receipt No: <input type="text" name="sb26FromReceiptNo2" /></label>
+                    <label>From Date: <input type="date" name="sb26FromDate2" /></label>
+                    <label>From Amount: <input type="number" name="sb26FromAmount2" /></label>
+                    <label>To Receipt No: <input type="text" name="sb26ToReceiptNo2" /></label>
+                    <label>To Date: <input type="date" name="sb26ToDate2" /></label>
+                    <label>To Amount: <input type="number" name="sb26ToAmount2" /></label>
+                    <label>Balance Receipt: <input type="number" name="sb26Balance2" /></label>
+                </div>
+                <div>
+                    <h3>Book 3</h3>
+                    <label>Book No: <input type="text" name="sb26BookNo3" /></label>
+                </div>
+            </section>
+
+            <section>
+                <h2>SB-26 Book Entries Continued</h2>
+                <div>
+                    <h3>Book 4</h3>
+                    <label>Book No: <input type="text" name="sb26BookNo4" /></label>
+                    <label>From Receipt No: <input type="text" name="sb26FromReceiptNo4" /></label>
+                    <label>From Date: <input type="date" name="sb26FromDate4" /></label>
+                    <label>From Amount: <input type="number" name="sb26FromAmount4" /></label>
+                    <label>To Receipt No: <input type="text" name="sb26ToReceiptNo4" /></label>
+                    <label>To Date: <input type="date" name="sb26ToDate4" /></label>
+                    <label>To Amount: <input type="number" name="sb26ToAmount4" /></label>
+                    <label>Balance Receipt: <input type="number" name="sb26Balance4" /></label>
+                </div>
+            </section>
+
+            <section>
+                <h2>BO Balance from Selected Dates</h2>
+                <div>
+                    <h3>Balance 1</h3>
+                    <label>Date: <input type="date" name="selectedBalanceDate1" /></label>
+                    <label>Balance: <input type="number" name="selectedBalance1" /></label>
+                </div>
+                <div>
+                    <h3>Balance 2</h3>
+                    <label>Date: <input type="date" name="selectedBalanceDate2" /></label>
+                    <label>Balance: <input type="number" name="selectedBalance2" /></label>
+                </div>
+                <div>
+                    <h3>Balance 3</h3>
+                    <label>Date: <input type="date" name="selectedBalanceDate3" /></label>
+                    <label>Balance: <input type="number" name="selectedBalance3" /></label>
+                </div>
+                <div>
+                    <h3>Balance 4</h3>
+                    <label>Date: <input type="date" name="selectedBalanceDate4" /></label>
+                    <label>Balance: <input type="number" name="selectedBalance4" /></label>
+                </div>
+                <div>
+                    <h3>Balance 5</h3>
+                    <label>Date: <input type="date" name="selectedBalanceDate5" /></label>
+                    <label>Balance: <input type="number" name="selectedBalance5" /></label>
+                </div>
+            </section>
+
+            <section>
+                <h2>RPLI Passbook Verification</h2>
+                <div>
+                    <h3>Entry 1</h3>
+                    <label>Policy No: <input type="text" name="rpliPolicyNo1" /></label>
+                    <label>Txn Date: <input type="date" name="rpliTxnDate1" /></label>
+                    <label>Txn Amount: <input type="number" name="rpliTxnAmount1" /></label>
+                </div>
+                <div>
+                    <h3>Entry 2</h3>
+                    <label>Policy No: <input type="text" name="rpliPolicyNo2" /></label>
+                    <label>Txn Date: <input type="date" name="rpliTxnDate2" /></label>
+                    <label>Txn Amount: <input type="number" name="rpliTxnAmount2" /></label>
+                </div>
+                <div>
+                    <h3>Entry 3</h3>
+                    <label>Policy No: <input type="text" name="rpliPolicyNo3" /></label>
+                    <label>Txn Date: <input type="date" name="rpliTxnDate3" /></label>
+                    <label>Txn Amount: <input type="number" name="rpliTxnAmount3" /></label>
+                </div>
+                <div>
+                    <h3>Entry 4</h3>
+                    <label>Policy No: <input type="text" name="rpliPolicyNo4" /></label>
+                    <label>Txn Date: <input type="date" name="rpliTxnDate4" /></label>
+                    <label>Txn Amount: <input type="number" name="rpliTxnAmount4" /></label>
+                </div>
+                <div>
+                    <h3>Entry 5</h3>
+                    <label>Policy No: <input type="text" name="rpliPolicyNo5" /></label>
+                    <label>Txn Date: <input type="date" name="rpliTxnDate5" /></label>
+                    <label>Txn Amount: <input type="number" name="rpliTxnAmount5" /></label>
+                </div>
+            </section>
+
+            <section>
+                <h2>RPLI Total Daily Deposits </h2>
+                <div>
+                    <h3>Deposit 1</h3>
+                    <label>Date: <input type="date" name="rpliDepositDate1" /></label>
+                    <label>Amount: <input type="number" name="rpliDepositAmount1" /></label>
+                </div>
+                <div>
+                    <h3>Deposit 2</h3>
+                    <label>Date: <input type="date" name="rpliDepositDate2" /></label>
+                    <label>Amount: <input type="number" name="rpliDepositAmount2" /></label>
+                </div>
+                <div>
+                    <h3>Deposit 3</h3>
+                    <label>Date: <input type="date" name="rpliDepositDate3" /></label>
+                    <label>Amount: <input type="number" name="rpliDepositAmount3" /></label>
+                </div>
+                <div>
+                    <h3>Deposit 4</h3>
+                    <label>Date: <input type="date" name="rpliDepositDate4" /></label>
+                    <label>Amount: <input type="number" name="rpliDepositAmount4" /></label>
+                </div>
+                <div>
+                    <h3>Deposit 5</h3>
+                    <label>Date: <input type="date" name="rpliDepositDate5" /></label>
+                    <label>Amount: <input type="number" name="rpliDepositAmount5" /></label>
+                </div>
+                <div>
+                    <h3>Deposit 6</h3>
+                    <label>Date: <input type="date" name="rpliDepositDate6" /></label>
+                    <label>Amount: <input type="number" name="rpliDepositAmount6" /></label>
+                </div>
+                <div>
+                    <h3>Deposit 7</h3>
+                    <label>Date: <input type="date" name="rpliDepositDate7" /></label>
+                    <label>Amount: <input type="number" name="rpliDepositAmount7" /></label>
+                </div>
+                <div>
+                    <h3>Deposit 8</h3>
+                    <label>Date: <input type="date" name="rpliDepositDate8" /></label>
+                    <label>Amount: <input type="number" name="rpliDepositAmount8" /></label>
+                </div>
+                <div>
+                    <h3>Deposit 9</h3>
+                    <label>Date: <input type="date" name="rpliDepositDate9" /></label>
+                    <label>Amount: <input type="number" name="rpliDepositAmount9" /></label>
+                </div>
+                <div>
+                    <h3>Deposit 10</h3>
+                    <label>Date: <input type="date" name="rpliDepositDate10" /></label>
+                    <label>Amount: <input type="number" name="rpliDepositAmount10" /></label>
+                </div>
+            </section>
+
+            <section>
+                <h2>RD Discontinued Accounts</h2>
+                <div>
+                    <h3>Account 1</h3>
+                    <label>Account No: <input type="text" name="rdDiscAccNo1" /></label>
+                    <label>DLT: <input type="text" name="rdDiscDLT1" /></label>
+                    <label>Transaction Amount: <input type="number" name="rdDiscTxnAmount1" /></label>
+                    <label>Balance: <input type="number" name="rdDiscBalance1" /></label>
+                </div>
+                <div>
+                    <h3>Account 2</h3>
+                    <label>Account No: <input type="text" name="rdDiscAccNo2" /></label>
+                    <label>DLT: <input type="text" name="rdDiscDLT2" /></label>
+                    <label>Transaction Amount: <input type="number" name="rdDiscTxnAmount2" /></label>
+                    <label>Balance: <input type="number" name="rdDiscBalance2" /></label>
+                </div>
+                <div>
+                    <h3>Account 3</h3>
+                    <label>Account No: <input type="text" name="rdDiscAccNo3" /></label>
+                    <label>DLT: <input type="text" name="rdDiscDLT3" /></label>
+                    <label>Transaction Amount: <input type="number" name="rdDiscTxnAmount3" /></label>
+                    <label>Balance: <input type="number" name="rdDiscBalance3" /></label>
+                </div>
+                <div>
+                    <h3>Account 4</h3>
+                    <label>Account No: <input type="text" name="rdDiscAccNo4" /></label>
+                    <label>DLT: <input type="text" name="rdDiscDLT4" /></label>
+                    <label>Transaction Amount: <input type="number" name="rdDiscTxnAmount4" /></label>
+                    <label>Balance: <input type="number" name="rdDiscBalance4" /></label>
+                </div>
+                <div>
+                    <h3>Account 5</h3>
+                    <label>Account No: <input type="text" name="rdDiscAccNo5" /></label>
+                    <label>DLT: <input type="text" name="rdDiscDLT5" /></label>
+                    <label>Transaction Amount: <input type="number" name="rdDiscTxnAmount5" /></label>
+                    <label>Balance: <input type="number" name="rdDiscBalance5" /></label>
+                </div>
+            </section>
+
+            <section>
+                <h2>SB Passbook Verification </h2>
+                <div>
+                    <h3>SB Passbook 1</h3>
+                    <label>Account No: <input type="text" name="sbAccNo1" /></label>
+                    <label>DLT: <input type="text" name="sbDLT1" /></label>
+                    <label>Deposit: <input type="number" name="sbDeposit1" /></label>
+                    <label>Withdrawal: <input type="number" name="sbWithdrawal1" /></label>
+                    <label>Balance: <input type="number" name="sbBalance1" /></label>
+                </div>
+                <div>
+                    <h3>SB Passbook 2</h3>
+                    <label>Account No: <input type="text" name="sbAccNo2" /></label>
+                    <label>DLT: <input type="text" name="sbDLT2" /></label>
+                    <label>Deposit: <input type="number" name="sbDeposit2" /></label>
+                    <label>Withdrawal: <input type="number" name="sbWithdrawal2" /></label>
+                    <label>Balance: <input type="number" name="sbBalance2" /></label>
+                </div>
+                <div>
+                    <h3>SB Passbook 3</h3>
+                    <label>Account No: <input type="text" name="sbAccNo3" /></label>
+                    <label>DLT: <input type="text" name="sbDLT3" /></label>
+                    <label>Deposit: <input type="number" name="sbDeposit3" /></label>
+                    <label>Withdrawal: <input type="number" name="sbWithdrawal3" /></label>
+                    <label>Balance: <input type="number" name="sbBalance3" /></label>
+                </div>
+                <div>
+                    <h3>SB Passbook 4</h3>
+                    <label>Account No: <input type="text" name="sbAccNo4" /></label>
+                    <label>DLT: <input type="text" name="sbDLT4" /></label>
+                    <label>Deposit: <input type="number" name="sbDeposit4" /></label>
+                    <label>Withdrawal: <input type="number" name="sbWithdrawal4" /></label>
+                    <label>Balance: <input type="number" name="sbBalance4" /></label>
+                </div>
+                <div>
+                    <h3>SB Passbook 5</h3>
+                    <label>Account No: <input type="text" name="sbAccNo5" /></label>
+                    <label>DLT: <input type="text" name="sbDLT5" /></label>
+                    <label>Deposit: <input type="number" name="sbDeposit5" /></label>
+                    <label>Withdrawal: <input type="number" name="sbWithdrawal5" /></label>
+                    <label>Balance: <input type="number" name="sbBalance5" /></label>
+                </div>
+                <div>
+                    <h3>SB Passbook 6</h3>
+                    <label>Account No: <input type="text" name="sbAccNo6" /></label>
+                    <label>DLT: <input type="text" name="sbDLT6" /></label>
+                    <label>Deposit: <input type="number" name="sbDeposit6" /></label>
+                    <label>Withdrawal: <input type="number" name="sbWithdrawal6" /></label>
+                    <label>Balance: <input type="number" name="sbBalance6" /></label>
+                </div>
+            </section>
+
+            <section>
+                <h2>RD Passbook Verification</h2>
+                <div>
+                    <h3>RD Passbook 1</h3>
+                    <label>Account No: <input type="text" name="rdAccNo1" /></label>
+                    <label>DLT: <input type="text" name="rdDLT1" /></label>
+                    <label>Deposit: <input type="number" name="rdDeposit1" /></label>
+                    <label>Withdrawal: <input type="number" name="rdWithdrawal1" /></label>
+                    <label>Balance: <input type="number" name="rdBalance1" /></label>
+                </div>
+                <div>
+                    <h3>RD Passbook 2</h3>
+                    <label>Account No: <input type="text" name="rdAccNo2" /></label>
+                    <label>DLT: <input type="text" name="rdDLT2" /></label>
+                    <label>Deposit: <input type="number" name="rdDeposit2" /></label>
+                    <label>Withdrawal: <input type="number" name="rdWithdrawal2" /></label>
+                    <label>Balance: <input type="number" name="rdBalance2" /></label>
+                </div>
+                <div>
+                    <h3>RD Passbook 3</h3>
+                    <label>Account No: <input type="text" name="rdAccNo3" /></label>
+                    <label>DLT: <input type="text" name="rdDLT3" /></label>
+                    <label>Deposit: <input type="number" name="rdDeposit3" /></label>
+                    <label>Withdrawal: <input type="number" name="rdWithdrawal3" /></label>
+                    <label>Balance: <input type="number" name="rdBalance3" /></label>
+                </div>
+                <div>
+                    <h3>RD Passbook 4</h3>
+                    <label>Account No: <input type="text" name="rdAccNo4" /></label>
+                    <label>DLT: <input type="text" name="rdDLT4" /></label>
+                    <label>Deposit: <input type="number" name="rdDeposit4" /></label>
+                    <label>Withdrawal: <input type="number" name="rdWithdrawal4" /></label>
+                    <label>Balance: <input type="number" name="rdBalance4" /></label>
+                </div>
+                <div>
+                    <h3>RD Passbook 5</h3>
+                    <label>Account No: <input type="text" name="rdAccNo5" /></label>
+                    <label>DLT: <input type="text" name="rdDLT5" /></label>
+                    <label>Deposit: <input type="number" name="rdDeposit5" /></label>
+                    <label>Withdrawal: <input type="number" name="rdWithdrawal5" /></label>
+                    <label>Balance: <input type="number" name="rdBalance5" /></label>
+                </div>
+                <div>
+                    <h3>RD Passbook 6</h3>
+                    <label>Account No: <input type="text" name="rdAccNo6" /></label>
+                    <label>DLT: <input type="text" name="rdDLT6" /></label>
+                    <label>Deposit: <input type="number" name="rdDeposit6" /></label>
+                    <label>Withdrawal: <input type="number" name="rdWithdrawal6" /></label>
+                    <label>Balance: <input type="number" name="rdBalance6" /></label>
+                </div>
+            </section>
+
+            <section>
+                <h2>SSA Passbook Verification</h2>
+                <div>
+                    <h3>SSA Passbook 1</h3>
+                    <label>Account No: <input type="text" name="ssaAccNo1" /></label>
+                    <label>DLT: <input type="text" name="ssaDLT1" /></label>
+                    <label>Deposit: <input type="number" name="ssaDeposit1" /></label>
+                    <label>Withdrawal: <input type="number" name="ssaWithdrawal1" /></label>
+                    <label>Balance: <input type="number" name="ssaBalance1" /></label>
+                </div>
+                <div>
+                    <h3>SSA Passbook 2</h3>
+                    <label>Account No: <input type="text" name="ssaAccNo2" /></label>
+                    <label>DLT: <input type="text" name="ssaDLT2" /></label>
+                    <label>Deposit: <input type="number" name="ssaDeposit2" /></label>
+                    <label>Withdrawal: <input type="number" name="ssaWithdrawal2" /></label>
+                    <label>Balance: <input type="number" name="ssaBalance2" /></label>
+                </div>
+                <div>
+                    <h3>SSA Passbook 3</h3>
+                    <label>Account No: <input type="text" name="ssaAccNo3" /></label>
+                    <label>DLT: <input type="text" name="ssaDLT3" /></label>
+                    <label>Deposit: <input type="number" name="ssaDeposit3" /></label>
+                    <label>Withdrawal: <input type="number" name="ssaWithdrawal3" /></label>
+                    <label>Balance: <input type="number" name="ssaBalance3" /></label>
+                </div>
+                <div>
+                    <h3>SSA Passbook 4</h3>
+                    <label>Account No: <input type="text" name="ssaAccNo4" /></label>
+                    <label>DLT: <input type="text" name="ssaDLT4" /></label>
+                    <label>Deposit: <input type="number" name="ssaDeposit4" /></label>
+                    <label>Withdrawal: <input type="number" name="ssaWithdrawal4" /></label>
+                    <label>Balance: <input type="number" name="ssaBalance4" /></label>
+                </div>
+                <div>
+                    <h3>SSA Passbook 5</h3>
+                    <label>Account No: <input type="text" name="ssaAccNo5" /></label>
+                    <label>DLT: <input type="text" name="ssaDLT5" /></label>
+                    <label>Deposit: <input type="number" name="ssaDeposit5" /></label>
+                    <label>Withdrawal: <input type="number" name="ssaWithdrawal5" /></label>
+                    <label>Balance: <input type="number" name="ssaBalance5" /></label>
+                </div>
+                <div>
+                    <h3>SSA Passbook 6</h3>
+                    <label>Account No: <input type="text" name="ssaAccNo6" /></label>
+                    <label>DLT: <input type="text" name="ssaDLT6" /></label>
+                    <label>Deposit: <input type="number" name="ssaDeposit6" /></label>
+                    <label>Withdrawal: <input type="number" name="ssaWithdrawal6" /></label>
+                    <label>Balance: <input type="number" name="ssaBalance6" /></label>
+                </div>
+            </section>
+
+            <section>
+                <h2>TD Passbook Verification</h2>
+                <div>
+                    <h3>TD Passbook 1</h3>
+                    <label>Account No: <input type="text" name="tdAccNo1" /></label>
+                    <label>DLT: <input type="text" name="tdDLT1" /></label>
+                    <label>Deposit: <input type="number" name="tdDeposit1" /></label>
+                    <label>Withdrawal: <input type="number" name="tdWithdrawal1" /></label>
+                    <label>Balance: <input type="number" name="tdBalance1" /></label>
+                </div>
+                <div>
+                    <h3>TD Passbook 2</h3>
+                    <label>Account No: <input type="text" name="tdAccNo2" /></label>
+                    <label>DLT: <input type="text" name="tdDLT2" /></label>
+                    <label>Deposit: <input type="number" name="tdDeposit2" /></label>
+                    <label>Withdrawal: <input type="number" name="tdWithdrawal2" /></label>
+                    <label>Balance: <input type="number" name="tdBalance2" /></label>
+                </div>
+                <div>
+                    <h3>TD Passbook 3</h3>
+                    <label>Account No: <input type="text" name="tdAccNo3" /></label>
+                    <label>DLT: <input type="text" name="tdDLT3" /></label>
+                    <label>Deposit: <input type="number" name="tdDeposit3" /></label>
+                    <label>Withdrawal: <input type="number" name="tdWithdrawal3" /></label>
+                    <label>Balance: <input type="number" name="tdBalance3" /></label>
+                </div>
+                <div>
+                    <h3>TD Passbook 4</h3>
+                    <label>Account No: <input type="text" name="tdAccNo4" /></label>
+                    <label>DLT: <input type="text" name="tdDLT4" /></label>
+                    <label>Deposit: <input type="number" name="tdDeposit4" /></label>
+                    <label>Withdrawal: <input type="number" name="tdWithdrawal4" /></label>
+                    <label>Balance: <input type="number" name="tdBalance4" /></label>
+                </div>
+                <div>
+                    <h3>TD Passbook 5</h3>
+                    <label>Account No: <input type="text" name="tdAccNo5" /></label>
+                    <label>DLT: <input type="text" name="tdDLT5" /></label>
+                    <label>Deposit: <input type="number" name="tdDeposit5" /></label>
+                    <label>Withdrawal: <input type="number" name="tdWithdrawal5" /></label>
+                    <label>Balance: <input type="number" name="tdBalance5" /></label>
+                </div>
+                <div>
+                    <h3>TD Passbook 6</h3>
+                    <label>Account No: <input type="text" name="tdAccNo6" /></label>
+                    <label>DLT: <input type="text" name="tdDLT6" /></label>
+                    <label>Deposit: <input type="number" name="tdDeposit6" /></label>
+                    <label>Withdrawal: <input type="number" name="tdWithdrawal6" /></label>
+                    <label>Balance: <input type="number" name="tdBalance6" /></label>
+                </div>
+            </section>
+
+            <section>
+                <h2>Five Date Cash Flow Verification</h2>
+                <div>
+                    <h3>Date 1</h3>
+                    <label>Date: <input type="date" name="cashFlowDate1" /></label>
+                    <label>Opening Balance: <input type="number" name="openingBalance1" /></label>
+                    <label>SB Deposit: <input type="number" name="sbDeposit1" /></label>
+                    <label>RD Deposit: <input type="number" name="rdDeposit1" /></label>
+                    <label>SSA Deposit: <input type="number" name="ssaDeposit1" /></label>
+                    <label>TD Deposit: <input type="number" name="tdDeposit1" /></label>
+                    <label>RPLI Deposit: <input type="number" name="rpliDeposit1" /></label>
+                    <label>IPPB Deposit: <input type="number" name="ippbDeposit1" /></label>
+                    <label>Cash Received from AO: <input type="number" name="cashFromAO1" /></label>
+                    <label>SB Withdrawal: <input type="number" name="sbWithdrawalCash1" /></label>
+                    <label>IPPB Withdrawal: <input type="number" name="ippbWithdrawal1" /></label>
+                    <label>Cash Remitted to AO: <input type="number" name="cashToAO1" /></label>
+                    <label>Closing Balance: <input type="number" name="closingBalance1" /></label>
+                </div>
+                <div>
+                    <h3>Date 2</h3>
+                    <label>Date: <input type="date" name="cashFlowDate2" /></label>
+                    <label>Opening Balance: <input type="number" name="openingBalance2" /></label>
+                    <label>SB Deposit: <input type="number" name="sbDeposit2" /></label>
+                    <label>RD Deposit: <input type="number" name="rdDeposit2" /></label>
+                    <label>SSA Deposit: <input type="number" name="ssaDeposit2" /></label>
+                    <label>TD Deposit: <input type="number" name="tdDeposit2" /></label>
+                    <label>RPLI Deposit: <input type="number" name="rpliDeposit2" /></label>
+                    <label>IPPB Deposit: <input type="number" name="ippbDeposit2" /></label>
+                    <label>Cash Received from AO: <input type="number" name="cashFromAO2" /></label>
+                    <label>SB Withdrawal: <input type="number" name="sbWithdrawalCash2" /></label>
+                    <label>IPPB Withdrawal: <input type="number" name="ippbWithdrawal2" /></label>
+                    <label>Cash Remitted to AO: <input type="number" name="cashToAO2" /></label>
+                    <label>Closing Balance: <input type="number" name="closingBalance2" /></label>
+                </div>
+            </section>
+            <section>
+
+                <div>
+                    <h3>Date 3</h3>
+                    <label>Date: <input type="date" name="cashFlowDate3" /></label>
+                    <label>Opening Balance: <input type="number" name="openingBalance3" /></label>
+                    <label>SB Deposit: <input type="number" name="sbDeposit3" /></label>
+                    <label>RD Deposit: <input type="number" name="rdDeposit3" /></label>
+                    <label>SSA Deposit: <input type="number" name="ssaDeposit3" /></label>
+                    <label>TD Deposit: <input type="number" name="tdDeposit3" /></label>
+                    <label>RPLI Deposit: <input type="number" name="rpliDeposit3" /></label>
+                    <label>IPPB Deposit: <input type="number" name="ippbDeposit3" /></label>
+                    <label>Cash Received from AO: <input type="number" name="cashFromAO3" /></label>
+                    <label>SB Withdrawal: <input type="number" name="sbWithdrawalCash3" /></label>
+                    <label>IPPB Withdrawal: <input type="number" name="ippbWithdrawal3" /></label>
+                    <label>Cash Remitted to AO: <input type="number" name="cashToAO3" /></label>
+                    <label>Closing Balance: <input type="number" name="closingBalance3" /></label>
+                </div>
+                <div>
+                    <h3>Date 4</h3>
+                    <label>Date: <input type="date" name="cashFlowDate4" /></label>
+                    <label>Opening Balance: <input type="number" name="openingBalance4" /></label>
+                    <label>SB Deposit: <input type="number" name="sbDeposit4" /></label>
+                    <label>RD Deposit: <input type="number" name="rdDeposit4" /></label>
+                    <label>SSA Deposit: <input type="number" name="ssaDeposit4" /></label>
+                    <label>TD Deposit: <input type="number" name="tdDeposit4" /></label>
+                    <label>RPLI Deposit: <input type="number" name="rpliDeposit4" /></label>
+                    <label>IPPB Deposit: <input type="number" name="ippbDeposit4" /></label>
+                    <label>Cash Received from AO: <input type="number" name="cashFromAO4" /></label>
+                    <label>SB Withdrawal: <input type="number" name="sbWithdrawalCash4" /></label>
+                    <label>IPPB Withdrawal: <input type="number" name="ippbWithdrawal4" /></label>
+                    <label>Cash Remitted to AO: <input type="number" name="cashToAO4" /></label>
+                    <label>Closing Balance: <input type="number" name="closingBalance4" /></label>
+                </div>
+                <div>
+                    <h3>Date 5</h3>
+                    <label>Date: <input type="date" name="cashFlowDate5" /></label>
+                    <label>Opening Balance: <input type="number" name="openingBalance5" /></label>
+                    <label>SB Deposit: <input type="number" name="sbDeposit5" /></label>
+                    <label>RD Deposit: <input type="number" name="rdDeposit5" /></label>
+                    <label>SSA Deposit: <input type="number" name="ssaDeposit5" /></label>
+                    <label>TD Deposit: <input type="number" name="tdDeposit5" /></label>
+                    <label>RPLI Deposit: <input type="number" name="rpliDeposit5" /></label>
+                    <label>IPPB Deposit: <input type="number" name="ippbDeposit5" /></label>
+                    <label>Cash Received from AO: <input type="number" name="cashFromAO5" /></label>
+                    <label>SB Withdrawal: <input type="number" name="sbWithdrawalCash5" /></label>
+                    <label>IPPB Withdrawal: <input type="number" name="ippbWithdrawal5" /></label>
+                    <label>Cash Remitted to AO: <input type="number" name="cashToAO5" /></label>
+                    <label>Closing Balance: <input type="number" name="closingBalance5" /></label>
+                </div>
+            </section>
+            </section>
+
+            <section>
+                <h2>Register Maintenance Verification</h2>
+                <label>BOSB Journal Maintained: <select name="bosbJournal">
+                        <option value="">Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select></label>
+                <label>BOSB Summary Maintained: <select name="bosbSummary">
+                        <option value="">Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select></label>
+                <label>BO Daily Account Maintained: <select name="boDailyAccount">
+                        <option value="">Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select></label>
+                <label>BO Daily Account Verified with System: <select name="boDailyAccountVerified">
+                        <option value="">Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select></label>
+                <label>BO Summary Maintained: <select name="boSummary">
+                        <option value="">Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select></label>
+                <label>BOSB Abstract Verified: <select name="bosbAbstract">
+                        <option value="">Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select></label>
+                <label>BOSB Return and Voucher Bundles Sent to AO: <select name="bosbReturn">
+                        <option value="">Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select></label>
+                <label>RICT BO Summary Verified: <select name="rictBoSummary">
+                        <option value="">Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select></label>
+                <label>BO Verification Report Maintained: <select name="boVerificationReport">
+                        <option value="">Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select></label>
+                <label>BO Slip Verified: <select name="boSlip">
+                        <option value="">Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select></label>
+            </section>
+
+            <section>
+                <h2>Inspection Officer Remarks </h2>
+                <label>Remarks / Observations by Inspecting Officer:<br>
+                    <textarea name="inspectorRemarks" rows="5"></textarea>
+                </label>
+                <label>Signature of Inspecting Officer: <input type="text" name="inspectorSignature" /></label>
+                <label>Date: <input type="date" name="inspectorDate" /></label>
+            </section>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
