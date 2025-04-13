@@ -126,14 +126,75 @@ button[type="submit"]:hover {
   transform: translateY(-1px);
 }
 
+/* img css */
+/* Header logo + heading layout */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.header-flex img {
+  max-width: 140px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.header-flex h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #b71c1c;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 /* Mobile layout */
 @media (max-width: 768px) {
   section {
     grid-template-columns: 1fr;
   }
+
 }
 
 /* Optional: Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+
+
+/* Multi-step form: only show one section at a time */
+.form-section {
+  display: none;
+}
+
+.form-section.active {
+  display: grid;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-buttons button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #0d47a1;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: #08306b;
 }
